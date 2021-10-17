@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Take me back" icon="home" color="primary"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="intro">
+
+  <ion-list>
+    <ion-button color="light" size="small" fill="solid" (click)="send()" > Send me Notification for the newest <ion-icon name="paw"></ion-icon>  </ion-button>
+    <br>
+    <br>
+    <ion-badge href="#"color="primary" size="full" expand="block" fill="solid" > <ion-icon name="paw"></ion-icon> Click the animal for more Information <ion-icon name="paw"></ion-icon></ion-badge>
+
+    <ion-item *ngFor="let item of items" (click)="showOptions(item)">
+      <ion-thumbnail slot="start">
+        <img src="{{item.picture}}">
+      </ion-thumbnail>
+      <ion-label>
+        <ion-badge color="medium">{{item.title}}</ion-badge>
+
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
+

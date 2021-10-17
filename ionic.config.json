@@ -1,0 +1,7 @@
+{
+  "name": "PuppyApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
